@@ -36,10 +36,8 @@ Cloud Computing is the delivery of computing services over the Internet ("the cl
 
 1. **Public Cloud**
 2. **Private Cloud**
-3. **Hybrid Cloud**:
-4. **Community Cloud**
-
-![Cloud Image](../imgs/cloud-model-types.png "Cloud")
+3. **Hybrid Cloud**
+4. **Multi Cloud**
 
 
 ### The different types of cloud services are:
@@ -47,9 +45,8 @@ Cloud Computing is the delivery of computing services over the Internet ("the cl
 1. **IaaS (Infrastructure as a Service)**: Provides virtualized computing resources over the internet, like VMs and storage.
 2. **PaaS (Platform as a Service)**: Offers hardware and software tools over the internet, typically for application development.
 3. **SaaS (Software as a Service)**: Delivers software applications over the internet.
-4. **FaaS (Function as a Service)**: Enables developers to execute code in response to events without managing the underlying infrastructure.
 
-![Cloud Image](../imgs/cloud-services.jpg "Cloud services")
+![Cloud Image](../imgs/cloud-services2.jpg "Cloud services")
 
 
 ### Advantages of Cloud for a Business:
