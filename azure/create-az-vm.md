@@ -2,7 +2,7 @@
 
 ## How Virtual Machines Work
 
-A Virtual Machine (VM) is a software emulation of a physical computer that runs an operating system and applications, just like a physical computer. A **hypervisor** manages VMs by allocating physical resources (like CPU, memory, and storage) to each VM.
+A Virtual Machine (VM) is a software emulation of a physical computer that runs an operating system. A **hypervisor** manages VMs by allocating physical resources (like CPU, memory, and storage) to each VM.
 
 **Components**:
   - **Virtual CPU (vCPU)**: Simulated CPU that performs computation tasks for the VM.
