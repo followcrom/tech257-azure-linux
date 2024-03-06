@@ -60,6 +60,7 @@ Cloud Computing is the delivery of computing services over the Internet ("the cl
 3. **Flexibility and Mobility**: Allows employees to work from anywhere with internet access.
 4. **Disaster Recovery**: Enhances data backup and recovery processes.
 5. **Innovation**: Facilitates rapid deployment of new applications and services.
+6. **SLA**: Service Level Agreement. A guaranteed level of availability.
 
 ### Disadvantages of Cloud for a Business:
 
@@ -100,8 +101,6 @@ IBM Cloud, Oracle Cloud, and others: These provider hold smaller but still impor
 
 ### What are the 4 pillars of DevOps?
 
-The 4 pillars of DevOps are:
-
 1. **Collaboration and Culture**: facilitated by shared tools and platforms that allow for collaboration across global teams.
 
 2. **Automation**: automating repetitive tasks, such as testing, deployment, and infrastructure provisioning.
@@ -130,9 +129,9 @@ Cloud Computing as a business model works on the principles of service provision
 
 2. **Subscription-Based Pricing**: Customers pay for cloud services on a subscription basis, which could be monthly, annually, or based on usage, providing predictable expenses and flexibility.
 
-3. **Scalability and Elasticity**: Customers can scale services up or down based on demand, ensuring they only pay for what they use, which is ideal for handling varying workloads.
+3. **Scalability and Elasticity**: Customers can scale services up or down based on demand, ensuring they only pay for what they use.
 
-4. **Shared Resources**: Cloud providers use multi-tenant models, where multiple customers share the same infrastructure, leading to cost efficiencies through economies of scale.
+4. **Shared Resources**: Multiple customers share the same infrastructure, leading to cost efficiencies through economies of scale.
 
 5. **Maintenance and Upgrades**: The cloud provider is responsible for maintaining, upgrading, and securing the infrastructure, reducing the IT overhead for businesses.
 

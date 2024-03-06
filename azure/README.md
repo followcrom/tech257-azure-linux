@@ -126,3 +126,9 @@ This categorization helps you to navigate and choose the right services for your
 - **For ongoing projects**: To explore cost-saving opportunities by simulating changes to your current setup.
 
 In essence, the Azure Pricing Calculator is a proactive tool for managing and optimizing your Azure expenditures, ensuring that you make informed decisions regarding your cloud investments.
+
+### VM
+Region
+VPN
+Resource group
+Subnet
