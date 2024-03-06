@@ -29,7 +29,7 @@ A Virtual Machine (VM) is a software emulation of a physical computer that runs 
 
 Open a terminal and use the command:
 
-`ssh-keygen -t rsa -b 2048 -C "<email>`.
+`ssh-keygen -t rsa -b 2048 -C "youremail@example.com"`
 
 When prompted, enter a name for the key pair, then press Enter.
 
@@ -110,7 +110,7 @@ After deletion, ensure that the VM and any selected associated resources no long
 
 
 ![Cloud Image](../imgs/vms/vm_delete.jpg "Delete a VM")
-
+<!-- 
 ## Azure Virtual Network Basics
 
 - **Definition**: An Azure Virtual Network (VNet) is a logically isolated network on the Azure cloud that enables Azure resources, like virtual machines (VMs), to securely communicate with each other, the internet, and on-premises networks.
@@ -136,4 +136,4 @@ After deletion, ensure that the VM and any selected associated resources no long
   - Securely integrating cloud-based applications with on-premises data centers.
   - Creating isolated environments for testing and development.
 
-Azure Virtual Networks provide the foundational building blocks for networking in the Azure cloud, offering flexibility, security, and scalability for managing cloud-based networked applications.
+Azure Virtual Networks provide the foundational building blocks for networking in the Azure cloud, offering flexibility, security, and scalability for managing cloud-based networked applications. -->
