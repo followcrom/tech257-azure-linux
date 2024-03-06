@@ -30,7 +30,7 @@ Cloud Computing is the delivery of computing services over the Internet ("the cl
 5. **Analyze Data**
 6. **Embed Intelligence**
 7. **Integrate and Connect**
-8. 
+8. **Monitor & Get Feedback**
 
 ### What are the 4 MODELS of Cloud?
 
@@ -46,7 +46,11 @@ Cloud Computing is the delivery of computing services over the Internet ("the cl
 2. **PaaS (Platform as a Service)**: Offers hardware and software tools over the internet, typically for application development.
 3. **SaaS (Software as a Service)**: Delivers software applications over the internet.
 
-![Cloud Image](../imgs/cloud-services2.jpg "Cloud services")
+![Cloud Image](../imgs/cloud-computing.jpg "Cloud services")
+
+
+![Cloud Image](../imgs/cloud-computing-services.jpg)
+
 
 
 ### Advantages of Cloud for a Business:
