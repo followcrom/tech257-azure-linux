@@ -12,6 +12,8 @@ A Virtual Machine (VM) is a software emulation of a physical computer that runs 
 
 - **Isolation**: Each VM operates in an isolated environment, unaware of other VMs on the same host, ensuring security and stability.
 
+![Cloud Image](../imgs/vms/vm-resources.png "A VM")
+
 ## Logging into Azure
 
 - **Option 1**: Navigate and log into the Azure Portal: [https://portal.azure.com](https://portal.azure.com)
@@ -25,14 +27,15 @@ A Virtual Machine (VM) is a software emulation of a physical computer that runs 
 
 **Step 1**: Generate SSH Key Pair
 
-- Open a terminal and use the command:
+Open a terminal and use the command:
 
 `ssh-keygen -t rsa -b 2048 -C "<email>`.
 
 When prompted, enter a name for the key pair, then press Enter.
 
 **Step 2**: Save Public and Private Keys
-  - Save the keys in your local machine's `.ssh` directory.
+
+Save the keys in your local machine's `.ssh` directory.
 
 **Step 3**: Add SSH Public Key to Azure
   - On the Azure Portal, select **SSH public key**.
@@ -41,15 +44,12 @@ When prompted, enter a name for the key pair, then press Enter.
 
 ## Creating a VM on Azure
 
-- **Step 1: Sign in to Azure Portal**
-  - Navigate to [https://portal.azure.com](https://portal.azure.com) and log in with your Azure account.
-
-- **Step 2: Create a New Virtual Machine**
+- **Step 1: Create a New Virtual Machine**
   - On the Azure dashboard, select "Virtual machines".
   - Alternatively, you can search for "Virtual machines" in the search bar.
-  - In the "Virtual machines" page, click Create > Azure virtual machine. You will be taken through a series of steps to configure the VM.
+  - On the "Virtual machines" page, click _Create > Azure virtual machine_. You will be taken through to options to configure the VM.
 
-- **Step 3: Configure Basic Settings**
+- **Step 2: Configure Settings**
   - **Subscription**: Choose the _Azure Training_ subscription.
   - **Resource Group**: Choose _tech257_ as the resource group.
   - **Virtual Machine Name**: Enter a name for your VM.
@@ -59,31 +59,30 @@ When prompted, enter a name for the key pair, then press Enter.
   - **Image**: Choose the OS image: _Ubuntu Pro 18.04 LTS - Gen2_.
   - **Size**: Choose the VM size based on your performance and cost requirements. In this case _Standard_B1s - 1 vcpu, 1GiB_.
 
-- **Step 4: Administrator Account**
+- **Step 3: Administrator Account**
   - Set user name to _adminuser_.
-  - We'll use an SSH public key for authentication: an existing public key already added to the account.
+  - We'll use an SSH public key for authentication: an existing public key has already been added to the account.
 
-- **Step 5: Inbound Port Rules**
+- **Step 4: Inbound Port Rules**
   - We'll allow port 22 for SSH connections and port 80 for those over HTTP.
 
-- **Step 6: Disks**
+- **Step 5: Disks**
   - We'll use the _Standard SSD_ for the OS disk.
   - Check _Delete with VM_.
 
-- **Step 5: Configure Network Settings**
+- **Step 6: Network Settings**
   - Select a Virtual Network. In this case: _ramon-tech257-test-app-vnet_
   - Subnet: _public_.
 
-- **Step 6: Tags**
+- **Step 7: Tags**
   - Define the key-value pair for the resource: _Owner: Richard_.
-
-- **Step 7: Advanced Settings (Optional)**
-  - Configure any additional options, such as extensions, high availability, or Proximity Placement Groups.
 
 - **Step 8: Review and Create**
   - Review all settings, and then click "Create" to deploy your VM.
 
-![Cloud Image](../imgs/vms/vm_overview.jpg "Cloud")
+Deployment may take a few minutes. Once complete, you can view the VM on the Azure portal, as below:
+
+![Cloud Image](../imgs/vms/vm_overview.jpg "Deployed VM")
 
 ## Connect to VM Using SSH
 
@@ -93,27 +92,24 @@ In the terminal, use the command:
 
 ## Deleting a VM on Azure
 
-- **Step 1: Sign in to Azure Portal**
   - On the "Virtual machines" page from the Azure portal dashboard, find and select the VM you wish to delete.
-
-- **Step 2: Delete the Virtual Machine**
   - On the VM's overview page, click on the "Delete" button.
   - You may be asked to confirm the deletion. Confirm by typing the name of the VM or following the prompt instructions.
 
-- **Step 3: Delete Associated Resources (Optional)**
-  - When deleting a VM, consider if you also want to delete associated resources like disk storage, network interfaces, or public IP addresses. These resources are billed separately and won't be automatically deleted with the VM.
-  - Navigate to each associated resource and delete them individually if necessary.
+**Delete Associated Resources (Optional)**
 
-- **Step 4: Verify Deletion**
-  - After deletion, ensure that the VM and any selected associated resources no longer appear in their respective sections within the Azure portal.
+When deleting a VM, consider if you also want to delete associated resources like disk storage, network interfaces, or public IP addresses. These resources are billed separately and won't be automatically deleted with the VM.
+
+**Verify Deletion**
+
+After deletion, ensure that the VM and any selected associated resources no longer appear in their respective sections within the Azure portal.
 
 **Important Notes**:
 - Deleting a VM is irreversible. Ensure you have backed up any necessary data before proceeding.
 - Remember that deleting the VM does not automatically delete associated resources like disks or network interfaces, which might incur charges if left undeleted.
 
-By following these steps, you can successfully delete a VM and its associated resources on Azure, ensuring you manage your resources and costs effectively.
 
-![Cloud Image](../imgs/vms/vm_delete.jpg "Cloud")
+![Cloud Image](../imgs/vms/vm_delete.jpg "Delete a VM")
 
 ## Azure Virtual Network Basics
 
