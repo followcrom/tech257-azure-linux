@@ -7,7 +7,7 @@ Lists files and directories in the current directory with detailed information l
 
 `ls -l`
 
-### cd directory
+### cd
 Changes the current directory to the specified directory.
 
 `cd /path/to/directory`
@@ -17,7 +17,7 @@ Exits the current shell session.
 
 `exit`
 
-### cat filename
+### cat
 Displays the content of a file or concatenates multiple files.
 
 `cat filename.txt`
@@ -27,17 +27,17 @@ Shows a list of commands previously entered in the current session.
 
 `history`
 
-### curl url
+### curl
 Transfers data from or to a server, supporting various protocols like HTTP, HTTPS, FTP.
 
 `curl https://example.com`
 
-### rm filename
+### rm
 Removes a file. Be cautious as this deletes the file permanently.
 
 `rm filename.txt`
 
-### nano filename
+### nano
 Opens the Nano text editor for creating or editing files.
 
 `nano filename.txt`
@@ -47,7 +47,7 @@ Displays a tree representation of directory structure. May need to be installed.
 
 `tree /path/to/directory`
 
-### apt command
+### apt
 Package management utility for Ubuntu/Debian, used to install, update, and remove packages.
 
 `sudo apt update`
@@ -57,43 +57,43 @@ Switches to the root user, giving superuser access.
 
 `sudo su`
 
-### mv source destination
+### mv
 Moves or renames a file or directory.
 
 `mv oldname.txt newname.txt`
 
 
-### rm filename
+### rm
 Removes a file. Be cautious as this deletes the file permanently.
 
 `rm -filename.txt`
 
-### rm -f filename
+### rm -f
 Forcefully removes a file, bypassing prompts. Be cautious as this deletes the file permanently.
 
 `rm -f filename.txt`
 
-### rm -r directory
+### rm -r
 Recursively removes a directory and its contents. Be cautious as this deletes the dir and its contents permanently.
 
 `rm -r directory`
 
-### mkdir directory
+### mkdir
 Creates a new directory.
 
 `mkdir new_directory`
 
-### touch filename
+### touch
 Creates a new file if it doesn't exist or updates the timestamp of an existing file.
 
 `touch newfile.txt`
 
-### file filename
+### file
 Determines the type of a file.
 
 `file filename.txt`
 
-### cp source destination
+### cp
 Copies files or directories.
 
 `cp source.txt destination.txt`

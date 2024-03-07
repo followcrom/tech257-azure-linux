@@ -1,22 +1,17 @@
 # Linux Research
 
-1. [Managing File Ownership and Permissions](#managing-file-ownership-and-permissions)
+1. [Managing File Ownership](#managing-file-ownership)
 
-2. [File Ownership and Permissions](#file-ownership-and-permissions)
+2. [Managing File Permissions](#managing-file-permissions)
 
-3. [managing file permissions using numeric values](#managing file permissions using numeric values)
+<br>
 
-
-4. [changing file permissions](#changing file permissions)
-
-
-
-# 1, Managing File Ownership and Permissions
+# Managing File Ownership
 
 ## Managing file ownership
 In Linux, every file and directory has an associated owner and group. The chown and chmod commands are commonly used to manage ownership and permissions, respectively.
 
-### Viewing file ownership
+## Viewing file ownership
 
 Use the ls command with the -l (long listing) option. This command provides detailed information about files and directories, including their ownership.
 
@@ -40,8 +35,7 @@ The user can explicitly add execute permissions with:
 `chmod +x filename`.
 
 
-
-# 2, File Ownership and Permissions
+# Managing File  Permissions
 
 File permissions in Linux are divided into three categories: read (`r`), write (`w`), and execute (`x`), and these permissions can be independently set for the owner, the group, and others.
 
@@ -101,10 +95,10 @@ The line `-rwxr-xr-- 1 tcboony staff 123 Nov 25 18:36 keeprunning.sh` provides d
 - `keeprunning.sh`: This is the name of the file.
 
 
-## managing file permissions using numeric values
+<!-- ## managing file permissions using numeric values
 
 // Your content for Topic 3 goes here...
 
 ## changing file permissions
 
-// Your content for Topic 4 goes here...
+// Your content for Topic 4 goes here... -->
