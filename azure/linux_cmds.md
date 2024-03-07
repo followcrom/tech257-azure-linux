@@ -1,160 +1,124 @@
 # Linux Commands Overview
 
-This markdown provides a list of common Linux commands that are useful for managing and interacting with Linux-based systems.
+Common Linux commands that are useful for managing and interacting with Linux-based systems.
 
-## `ls -l`
+### ls -l
 Lists files and directories in the current directory with detailed information like permissions, number of links, owner, group, size, and timestamp.
-```bash
-ls -l
-```
 
-## cd <directory>
+`ls -l`
+
+### cd directory
 Changes the current directory to the specified directory.
 
-```bash
-cd /path/to/directory
+`cd /path/to/directory`
 
-```
-## exit
+### exit
 Exits the current shell session.
 
-```bash
-exit
-```
+`exit`
 
-## cat <file>
+### cat filename
 Displays the content of a file or concatenates multiple files.
 
-```
-cat filename.txt
-```
+`cat filename.txt`
 
-
-## history
+### history
 Shows a list of commands previously entered in the current session.
 
-```
-history
-```
+`history`
 
-## curl <URL>
+### curl url
 Transfers data from or to a server, supporting various protocols like HTTP, HTTPS, FTP.
 
-```
-curl https://example.com
-```
+`curl https://example.com`
 
-## rm <file>
+### rm filename
 Removes a file. Be cautious as this deletes the file permanently.
 
-```
-rm filename.txt
-```
+`rm filename.txt`
 
-## nano <file>
+### nano filename
 Opens the Nano text editor for creating or editing files.
 
-```
-nano filename.txt
-```
+`nano filename.txt`
 
-## tree
+### tree
 Displays a tree representation of directory structure. May need to be installed.
 
-```
-tree /path/to/directory
-```
+`tree /path/to/directory`
 
-## apt <command>
+### apt command
 Package management utility for Ubuntu/Debian, used to install, update, and remove packages.
 
-```
-sudo apt update
-```
+`sudo apt update`
 
-## sudo su
+### sudo su
 Switches to the root user, giving superuser access.
 
-```
-sudo su
-```
+`sudo su`
 
-## mv <source> <destination>
+### mv source destination
 Moves or renames a file or directory.
 
-```
-mv oldname.txt newname.txt
-```
+`mv oldname.txt newname.txt`
 
-## rm -f <file>
+
+### rm filename
+Removes a file. Be cautious as this deletes the file permanently.
+
+`rm -filename.txt`
+
+### rm -f filename
 Forcefully removes a file, bypassing prompts. Be cautious as this deletes the file permanently.
 
-```
-rm -f filename.txt
-```
+`rm -f filename.txt`
 
-## rm -r <file>
+### rm -r directory
 Recursively removes a directory and its contents. Be cautious as this deletes the dir and its contents permanently.
 
-```
-rm -r directory
-```
+`rm -r directory`
 
-## mkdir <directory>
+### mkdir directory
 Creates a new directory.
 
-```
-mkdir new_directory
-```
+`mkdir new_directory`
 
-## touch <file>
+### touch filename
 Creates a new file if it doesn't exist or updates the timestamp of an existing file.
 
-```
-touch newfile.txt
-```
+`touch newfile.txt`
 
-## file <file>
+### file filename
 Determines the type of a file.
 
-```
-file filename.txt
-```
+`file filename.txt`
 
-## cp <source> <destination>
+### cp source destination
 Copies files or directories.
 
-```
-cp source.txt destination.txt
-```
+`cp source.txt destination.txt`
 
-## tab
+### tab
 Pressing the Tab key in the shell will auto-complete commands or show suggestions, including root directories when appropriate.
 
-## cd /
+### cd /
 Changes the current directory to the root directory.
 
-```
-cd /
-```
+`cd /`
 
-## cd
+### cd
 Changes the current directory to the home directory.
 
-```
-cd
-```
+`cd`
 
-## tab at root
+### tab at root
 
 Pressing the Tab key at the root directory will show a list of root directories.
 
-## pwd
+### pwd
 Prints the current working directory.
 
-```
-pwd
-```
+`pwd`
 
 # Env vars
 Print all env vars:
@@ -184,7 +148,7 @@ add to end of file:
 
 ```export MYNAME=Richard```
 
-You can use the environment variables set in .bashrc without restarting your terminal. To apply the changes made to .bashrc, you can source the file. Sourcing .bashrc will execute the file's contents in the current shell session, updating your environment accordingly. You can source your .bashrc file with the following command:
+You can use the environment variables set in .bashrc without restarting your terminal. To apply the changes made to .bashrc, you can source the file. Sourcing .bashrc will execute the file's contents in the current shell session, updating your environment accordingly.
 
 ```source ~/.bashrc```
 
