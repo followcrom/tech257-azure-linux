@@ -4,6 +4,8 @@
 
 2. [Managing File Permissions](#managing-file-permissions)
 
+3. [Managing File Permissions Using Numeric Values](#managing-file-permissions-using-numeric-values)
+
 <br>
 
 # Managing File Ownership
@@ -34,47 +36,49 @@ The user can explicitly add execute permissions with:
 
 `chmod +x filename`.
 
+<br><br>
 
-# Managing File  Permissions
+# Managing File Permissions
 
 File permissions in Linux are divided into three categories: read (`r`), write (`w`), and execute (`x`), and these permissions can be independently set for the owner, the group, and others.
 
-### Permissions for the User Entity in Linux
+### Permissions for the User Entity
 
-"User" entity refers to the file or directory's owner. These permissions include:
+"User" refers to the file or directory's owner. These permissions include:
 
 - **Read (`r`)**: The owner can view the contents of the file or list the contents of the directory.
 - **Write (`w`)**: The owner can modify the file or add, remove, and rename files within the directory.
 - **Execute (`x`)**: The owner can run the file as a program or script, or traverse the directory.
 
 
-### Permissions for the Group Entity in Linux
+### Permissions for the Group Entity
 
 "Group" entity refers to a specific group that is associated with the file or directory. The Group entity permissions include:
 
-- **Read (`r`)**: Group members can view the contents of the file or list the contents of the directory.
-- **Write (`w`)**: Group members can modify the file or add, remove, and rename files within the directory.
-- **Execute (`x`)**: Group members can run the file as a program or script, or traverse the directory.
+- **Read (`r`)**
+- **Write (`w`)**
+- **Execute (`x`)**
 
-### Permissions for the Other Entity in Linux
+### Permissions for the Other Entity
 
 "Other" entity refers to all users who are not the owner of the file or directory and are not members of the file's or directory's group. The permissions include:
 
-- **Read (`r`)**: Allows viewing the contents of the file or listing the contents of the directory.
-- **Write (`w`)**: Permits modifying the file or changing the contents of the directory (such as adding, removing, or renaming files within it).
-- **Execute (`x`)**: Enables running the file as a program or script, or accessing the directory.
+- **Read (`r`)**
+- **Write (`w`)**
+- **Execute (`x`)**
 
-### Question
+### Question:
+You give the following permissions to a [file: Use](file: Us "‌")r permissions are read-only, Group permissions are read and write, Other permissions are read, write and execute. You are logged in as the user which is owner of the file. What permissions will you have on this file? Explain.
 
 Given the scenario, the permissions you will have on this file are:
 
 - **Read (`r`)**: You can view the contents of the file.
 
-Since you are the owner and the User permissions are set to read-only, you will not have write or execute permissions on this file. Despite being the owner, the specific permissions set for the User entity (read-only in this case) determine your access level to the file.
-
 ### Description of File Permission Elements
 
-The line `-rwxr-xr-- 1 tcboony staff 123 Nov 25 18:36 keeprunning.sh` provides detailed information about the file `keeprunning.sh`. Here's a breakdown of each element:
+The line `-rwxr-xr-- 1 tcboony staff 123 Nov 25 18:36 keeprunning.sh` provides detailed information about the file `keeprunning.sh`.
+
+Here's a breakdown of each element:
 
 - `-rwxr-xr--`: This is the file's permission string, where:
   - `-`: The first character indicates the file type. A dash (`-`) signifies a regular file.
@@ -94,11 +98,80 @@ The line `-rwxr-xr-- 1 tcboony staff 123 Nov 25 18:36 keeprunning.sh` provides d
 
 - `keeprunning.sh`: This is the name of the file.
 
+<br><br>
 
-<!-- ## managing file permissions using numeric values
+# Managing File Permissions Using Numeric Values
 
-// Your content for Topic 3 goes here...
+- Read (r) permission is `4`.
+- Write (w) permission is `2`.
+- Execute (x) permission is `1`.
 
-## changing file permissions
+Permissions are combined for each class of users (owner, group, and others) using the sum of these values. For example:
 
-// Your content for Topic 4 goes here... -->
+- To give the owner read and write permissions, you would use `6` (read + write, or 4+2).
+- To give the group read and execute permissions, you would use `5` (read + execute, or 4+1).
+- To give others only execute permission, you would use `1`.
+
+A full permission set combines these values in a three-digit number, like `755`, which is a common setting for web files, allowing the owner full permissions and the group and others to read and execute.
+
+
+
+So, `Read + Write + Execute = 4 + 2 + 1 = 7`.
+
+- Owner: `7` (read + write + execute)
+- Group: `4` (read)
+- Others: `4` (read)
+
+### 644 in Linux file permissions
+The numeric mode 644 in Linux file permissions is quite common and has a specific meaning for the access it grants to the file for different user classes. Breaking it down:
+
+- Owner: `6` (read + write)
+- Group: `4` (read)
+- Others: `4` (read)
+
+<br>
+
+# Changing File Permissions
+To change file permissions in Linux, you use the **chmod (change mode)** command. The chmod command can be used with symbolic representations (like r, w, x for read, write, execute permissions) or numeric (octal) values that represent these permissions.
+
+To change permissions on a file, the end user typically needs to be either:
+
+- The owner of the file
+
+- A privileged user: a user with superuser (root) privileges
+
+### Examples of Changing File Permissions
+
+#### 1, Set Initial Permissions
+To set User to read, Group to read + write + execute, and Other to read and write only:
+
+`chmod u=r,g=rwx,o=rw testfile.txt`
+
+- u=r: Sets the User's permission to read only.
+
+- g=rwx: Sets the Group's permissions to read, write, and execute.
+
+- o=rw: Sets Others' permissions to read and write.
+
+#### 2, Add Execute Permissions (to all entities)
+To add execute permissions to all entities (User, Group, Other), you can use:
+
+`chmod a+x testfile.txt`
+
+- a+x adds execute permissions to all classes (user, group, others).
+
+#### 3, Take Write Permissions Away from Group
+
+`chmod g-w testfile.txt`
+
+- g-w removes the write permission from the group.
+
+#### 4, Use Numeric Values to Set Specific Permissions
+
+`chmod 640 testfile.txt`
+
+- 6 (User): Read + Write (4+2)
+
+- 4 (Group): Read
+
+- 0 (Other): No permissions
