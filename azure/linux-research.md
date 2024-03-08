@@ -6,6 +6,8 @@
 
 3. [Managing File Permissions Using Numeric Values](#managing-file-permissions-using-numeric-values)
 
+4. [Changing File Permissions](#changing-file-permissions)
+
 <br>
 
 # Managing File Ownership
