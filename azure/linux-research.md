@@ -44,30 +44,20 @@ The user can explicitly add execute permissions with:
 
 File permissions in Linux are divided into three categories: read (`r`), write (`w`), and execute (`x`), and these permissions can be independently set for the owner, the group, and others.
 
-### Permissions for the User Entity
+### Permissions for the User, Group, and Other Entities
 
-"User" refers to the file or directory's owner. These permissions include:
+"User" refers to the file or directory's owner.
+
+"Group" entity refers to a specific group that is associated with the file or directory.
+
+"Other" entity refers to all users who are not the owner of the file or directory and are not members of the file's or directory's group. 
+
+These permissions include:
 
 - **Read (`r`)**: The owner can view the contents of the file or list the contents of the directory.
 - **Write (`w`)**: The owner can modify the file or add, remove, and rename files within the directory.
 - **Execute (`x`)**: The owner can run the file as a program or script, or traverse the directory.
 
-
-### Permissions for the Group Entity
-
-"Group" entity refers to a specific group that is associated with the file or directory. The Group entity permissions include:
-
-- **Read (`r`)**
-- **Write (`w`)**
-- **Execute (`x`)**
-
-### Permissions for the Other Entity
-
-"Other" entity refers to all users who are not the owner of the file or directory and are not members of the file's or directory's group. The permissions include:
-
-- **Read (`r`)**
-- **Write (`w`)**
-- **Execute (`x`)**
 
 ### Question:
 You give the following permissions to a [file: Use](file: Us "‌")r permissions are read-only, Group permissions are read and write, Other permissions are read, write and execute. You are logged in as the user which is owner of the file. What permissions will you have on this file? Explain.
